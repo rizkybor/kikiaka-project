@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to new site <a href="https://nextjs.org">Kikiaka Digital Projects</a>
+          Welcome to new site <a href="https://www.instagram.com/kikiaka.id/" target="_blank">Kikiaka Digital Projects</a>
         </h1>
 
         <p className={styles.description}>
@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className={styles.grid}>
             <Link href="/dashboard" className={styles.card}> 
-                <h2>Portfolio Site &rarr;</h2>
+                <h2>Showcase &rarr;</h2>
                 <p>Please visit here to see us further</p>
             </Link>
 

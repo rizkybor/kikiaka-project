@@ -19,7 +19,7 @@ export default function Contact() {
         </p>
 
         <Link href="/"> 
-                <h2>Back to Index &rarr;</h2>
+                <h2>Back to Home &rarr;</h2>
             </Link>
       </main>
 
