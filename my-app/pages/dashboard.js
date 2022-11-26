@@ -96,11 +96,11 @@ function DashboardContent() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main >
         <ThemeProvider theme={mdTheme}>
           <Box sx={{ display: "flex" }}>
             <CssBaseline />
-            <AppBar position="absolute" open={open}>
+            <AppBar className={styles.tes} position="absolute" open={open}>
               <Toolbar
                 sx={{
                   pr: "24px", // keep right padding when drawer closed
@@ -125,7 +125,7 @@ function DashboardContent() {
                   noWrap
                   sx={{ flexGrow: 1 }}
                 >
-                  Dashboard
+                  Welcome to my site
                 </Typography>
               </Toolbar>
             </AppBar>
@@ -149,7 +149,7 @@ function DashboardContent() {
                 {secondaryListItems}
               </List>
             </Drawer>
-            <Box
+            <Box className={styles.tes}
               component="main"
               sx={{
                 backgroundColor: (theme) =>
@@ -205,9 +205,9 @@ function DashboardContent() {
           </Box>
         </ThemeProvider>
       </main>
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <p> @2022 - Kikiaka Digital Project</p>
-        {/* <a
+        <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -216,8 +216,8 @@ function DashboardContent() {
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
-        </a> */}
-      </footer>
+        </a>
+      </footer> */}
     </div>
   );
 }

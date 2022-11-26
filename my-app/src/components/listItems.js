@@ -13,24 +13,32 @@ import styles from '../../styles/Home.module.css'
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <BrandingWatermarkIcon />
-      </ListItemIcon>
-      <ListItemText primary="Website" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <CollectionsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Graphics" />
-    </ListItemButton>
+    <Link href="/dashboard"> 
+      <ListItemButton>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItemButton>
+    </Link>
+
+    <Link href="/website"> 
+      <ListItemButton>
+        <ListItemIcon>
+          <BrandingWatermarkIcon />
+        </ListItemIcon>
+        <ListItemText primary="Website" />
+      </ListItemButton>
+    </Link> 
+
+    <Link href="/graphics"> 
+      <ListItemButton>
+        <ListItemIcon>
+          <CollectionsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Graphics" />
+      </ListItemButton>
+    </Link>
    
   </React.Fragment>
 );
