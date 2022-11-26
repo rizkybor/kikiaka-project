@@ -1,7 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import { Box, Button, Container, Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 
 export default function Contact() {
   return (
@@ -13,14 +15,51 @@ export default function Contact() {
       </Head>
 
       <main className={styles.main}>
-      <p className={styles.description}>
-          {/* Get started by editing{' '} */}
-          <code className={styles.code}>Contact Page</code>
-        </p>
-
-        <Link href="/"> 
-                <h2>Back to Home &rarr;</h2>
+        <p className={styles.description}>
+          {/* <Box
+          sx={{
+            bgcolor: 'background.paper',
+            pt: 38,
+            pb: '100vh',
+          }}
+        > */}
+          <Container maxWidth="sm">
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              Album layout
+            </Typography>
+            <Typography
+              variant="h5"
+              align="center"
+              color="text.secondary"
+              paragraph
+            >
+              Something short and leading about the collection below—its
+              contents, the creator, etc. Make it short and sweet, but not too
+              short so folks don&apos;t simply skip over it entirely.
+            </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Button variant="contained">Main call to action</Button>
+              <Button variant="outlined">Secondary action</Button>
+            </Stack>
+            <Link href="/">
+              <h2>Back to Home &rarr;</h2>
             </Link>
+          </Container>
+          {/* </Box> */}
+          {/* Get started by editing{' '} */}
+          {/* <code className={styles.code}>Contact Page</code> */}
+        </p>
       </main>
 
       <footer className={styles.footer}>
@@ -37,5 +76,5 @@ export default function Contact() {
         </a> */}
       </footer>
     </div>
-  )
+  );
 }
