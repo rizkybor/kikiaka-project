@@ -8,7 +8,6 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import BrandingWatermarkIcon from '@mui/icons-material/BrandingWatermark';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import Link from 'next/link'
-import styles from '../../styles/Home.module.css'
 
 
 export const mainListItems = (

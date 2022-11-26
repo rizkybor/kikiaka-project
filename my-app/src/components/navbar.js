@@ -14,9 +14,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems, secondaryListItems } from "../components/listItems";
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
-import ListItemText from '@mui/material/ListItemText';
-
-
+import ListItemText from "@mui/material/ListItemText";
 
 const drawerWidth = 240;
 
@@ -45,7 +43,7 @@ const Drawer = styled(MuiDrawer, {
     position: "relative",
     whiteSpace: "nowrap",
     width: drawerWidth,
-    height: '100vh',
+    height: "100vh",
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -65,69 +63,67 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-
 export default function navbar() {
-    const [open, setOpen] = React.useState(true);
-    const toggleDrawer = () => {
-      setOpen(!open);
-    };
-   
+  const [open, setOpen] = React.useState(true);
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
+
   return (
-    <div >
-        <Box sx={{ display: "flex" }}>
-            <CssBaseline />
+    <div>
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
         <AppBar className={styles.tes} position="absolute" open={open}>
-            {/* <p >H</p> */}
-            <Toolbar
+          {/* <p >H</p> */}
+          <Toolbar
             sx={{
-                pr: "24px", // keep right padding when drawer closed
+              pr: "24px", // keep right padding when drawer closed
             }}
-            >
+          >
             <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                onClick={toggleDrawer}
-                sx={{
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={toggleDrawer}
+              sx={{
                 marginRight: "36px",
                 ...(open && { display: "none" }),
-                }}
+              }}
             >
-            <MenuIcon />
+              <MenuIcon />
             </IconButton>
             <Typography
-                component="h1"
-                variant="h6"
-                color="inherit"
-                noWrap
-                sx={{ flexGrow: 1 }}
+              component="h1"
+              variant="h6"
+              color="inherit"
+              noWrap
+              sx={{ flexGrow: 1 }}
             >
-                Welcome to my site
+              Welcome to my site
             </Typography>
-            </Toolbar>
+          </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
-            <Toolbar
+          <Toolbar
             sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                px: [1],
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              px: [1],
             }}
-            >
+          >
             <IconButton onClick={toggleDrawer}>
-                <ChevronLeftIcon />
+              <ChevronLeftIcon />
             </IconButton>
-            </Toolbar>
-            <Divider />
-            <List component="nav">
+          </Toolbar>
+          <Divider />
+          <List component="nav">
             {mainListItems}
             <Divider sx={{ my: 1 }} />
             {secondaryListItems}
-            </List>
+          </List>
         </Drawer>
-        </Box>
-        
+      </Box>
     </div>
-  )
+  );
 }

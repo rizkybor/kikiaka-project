@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,26 +14,31 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to new site <a href="https://www.instagram.com/kikiaka.id/" target="_blank">Kikiaka Digital Projects</a>
+          Welcome to new site{" "}
+          <a href="https://www.instagram.com/kikiaka.id/" target="_blank">
+            Kikiaka Digital Projects
+          </a>
         </h1>
 
         <p className={styles.description}>
           {/* Get started by editing{' '} */}
-          <code className={styles.code}>Follow My Instagram on @kikiaka.id</code>
+          <code className={styles.code}>
+            Follow My Instagram on @kikiaka.id
+          </code>
         </p>
 
         <div className={styles.grid}>
-            <Link href="/dashboard" className={styles.card}> 
-                <h2>Showcase &rarr;</h2>
-                <p>Please visit here to see us further</p>
-            </Link>
+          <Link href="/main" className={styles.card}>
+            <h2>Showcase &rarr;</h2>
+            <p>Please visit here to see us further</p>
+          </Link>
 
-            {/* <Link href="/post/abc" className={styles.card}> 
+          {/* <Link href="/post/abc" className={styles.card}> 
             <h2>Graphics &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </Link> */}
 
-          <Link href="/contact" className={styles.card}> 
+          <Link href="/contact" className={styles.card}>
             <h2>Call Me &rarr;</h2>
             <p>If you want to collaborate, please contact us</p>
           </Link>
@@ -49,7 +54,6 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a> */}
-          
         </div>
       </main>
 
@@ -67,5 +71,5 @@ export default function Home() {
         </a> */}
       </footer>
     </div>
-  )
+  );
 }
