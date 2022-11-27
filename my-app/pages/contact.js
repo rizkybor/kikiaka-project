@@ -2,14 +2,15 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+import myGif from "../src/media/gif/Business_Team.gif"
 
 export default function Contact() {
+  // console.log('hello')
   return (
     <div className={styles.container}>
       <Head>
@@ -20,58 +21,76 @@ export default function Contact() {
 
       <main className={styles.main}>
         <div className={styles.description}>
-          {/* <Box
-          sx={{
-            bgcolor: 'background.paper',
-            pt: 38,
-            pb: '100vh',
-          }}
-        > */}
-
-
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              About Me.
-            </Typography>
-            <Typography
-              variant="h6"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
-            </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              {/* <Button variant="contained">Main call to action</Button>
+          <Container maxWidth="lg">
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={6}>
+                <Typography
+                  component="h1"
+                  variant="h2"
+                  align="center"
+                  // color="text.primary"
+                  gutterBottom
+                  className={styles.titleContact}
+                >
+                  About <br />
+                  Me.
+                </Typography>
+                <Typography
+                  variant="h6"
+                  align="center"
+                  // color="text.secondary"
+                  paragraph
+                  className={styles.descriptionContact}
+                >
+                  Something short and leading about the collection below—its
+                  contents, the creator, etc. Make it short and sweet, but not
+                  too short so folks don&apos;t simply skip over it entirely.
+                </Typography>
+                <Stack
+                  sx={{ pt: 4 }}
+                  direction="row"
+                  spacing={2}
+                  justifyContent="center"
+                >
+                  {/* <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button> */}
-            </Stack>
-          <br></br>
-            <AudioPlayer
-            src="https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3"
-            // onPlay={e => console.log("onPlay")}
-          />
+                </Stack>
+                <br></br>
+                <AudioPlayer
+                  src="https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3"
+                  // onPlay={e => console.log("onPlay")}
+                />
+              </Grid>
+              <Grid item xs={4} md={6}>
+                <div className={styles.gifStyle}>
 
-          
-            <Link href="/">
+              <Image 
+                src={myGif}
+                alt="my-gif"
+                align="center"
+                width={700}
+                height={700}
+                />
+                </div>
+              {/* <Typography
+                  component="h1"
+                  variant="h2"
+                  align="center"
+                  // color="text.primary"
+                  gutterBottom
+                  className={styles.titleContact}
+                >
+                  Animation <br />
+                  Display.
+                </Typography> */}
+              </Grid>
+            </Grid>
+
+            <Link href="/" className={styles.blueHover}>
               <h2>Back to Home &rarr;</h2>
             </Link>
           </Container>
-          
         </div>
-        
       </main>
 
       <footer className={styles.footer}>
