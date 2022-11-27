@@ -92,6 +92,14 @@
   border-color: #0070f3;
 }
 
+.blueHover h2:hover{
+  color: #0070f3;
+}
+
+.blueHover h2 {
+  margin-top: 5em;
+}
+
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
@@ -107,6 +115,35 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+
+.titleContact{
+  margin: 0;
+  line-height: 1.15;
+  font-size: 5rem;
+  text-align: left;
+}
+
+.descriptionContact{
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  text-align: left;
+
+}
+
+
+.gifStyle{
+  align-items: center;
+  padding-top: -20px;
+  height: 30em;
+  width: 30em;
+  margin-top: -8em;
+  margin-left: 1em;
+}
+
+
+
+
 
 @media (max-width: 600px) {
   .grid {
