@@ -5,6 +5,10 @@ import Link from "next/link";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+
+
 export default function Contact() {
   return (
     <div className={styles.container}>
@@ -15,7 +19,7 @@ export default function Contact() {
       </Head>
 
       <main className={styles.main}>
-        <p className={styles.description}>
+        <div className={styles.description}>
           {/* <Box
           sx={{
             bgcolor: 'background.paper',
@@ -23,6 +27,8 @@ export default function Contact() {
             pb: '100vh',
           }}
         > */}
+
+
           <Container maxWidth="sm">
             <Typography
               component="h1"
@@ -31,10 +37,10 @@ export default function Contact() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              About Me.
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
               align="center"
               color="text.secondary"
               paragraph
@@ -49,17 +55,23 @@ export default function Contact() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              {/* <Button variant="contained">Main call to action</Button>
+              <Button variant="outlined">Secondary action</Button> */}
             </Stack>
+          <br></br>
+            <AudioPlayer
+            src="https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3"
+            // onPlay={e => console.log("onPlay")}
+          />
+
+          
             <Link href="/">
               <h2>Back to Home &rarr;</h2>
             </Link>
           </Container>
-          {/* </Box> */}
-          {/* Get started by editing{' '} */}
-          {/* <code className={styles.code}>Contact Page</code> */}
-        </p>
+          
+        </div>
+        
       </main>
 
       <footer className={styles.footer}>
